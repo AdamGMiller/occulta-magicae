@@ -10,7 +10,6 @@ Open `game/index.html` in a browser to play, or serve the `game/` directory with
 
 - **game/** — The web application (HTML/CSS/JS)
 - **image-gen/** — Python scripts for generating card art
-- **docs/** — Reference material and expansion planning (not included in repo)
 
 ## Development
 
