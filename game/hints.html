@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Occulta Magicae — Hints & Walkthrough</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body { overflow: auto; height: auto; padding: 40px 20px; max-width: 800px; margin: 0 auto; }
+    h1 { font-family: var(--font-display); color: var(--gold); font-size: 2rem; letter-spacing: 2px; margin-bottom: 5px; }
+    h2 { font-family: var(--font-display); color: var(--gold-dark); font-size: 1.1rem; margin-top: 30px; margin-bottom: 10px; letter-spacing: 1px; border-bottom: 1px solid var(--gold-dark); padding-bottom: 5px; }
+    h3 { font-family: var(--font-display); color: var(--ink); font-size: 0.9rem; margin-top: 20px; }
+    p, li { font-size: 0.95rem; line-height: 1.7; color: var(--ink-light); margin-bottom: 8px; }
+    ul { padding-left: 20px; }
+    .back-link { font-family: var(--font-display); font-size: 0.8rem; color: var(--gold-dark); text-decoration: none; letter-spacing: 1px; }
+    .back-link:hover { color: var(--gold); }
+    .spoiler { background: var(--ink); color: var(--ink); cursor: pointer; padding: 2px 6px; border-radius: 3px; transition: all 0.3s; }
+    .spoiler:hover, .spoiler.revealed { background: transparent; color: var(--ink-light); }
+    .ending-box { background: rgba(44,24,16,0.05); border: 1px solid var(--gold-dark); border-radius: 8px; padding: 15px 20px; margin: 15px 0; }
+    .ending-box h3 { margin-top: 0; color: var(--gold-dark); }
+    .key { font-family: var(--font-display); background: var(--ink); color: var(--gold); padding: 1px 6px; border-radius: 3px; font-size: 0.75rem; letter-spacing: 1px; }
+    em { color: var(--gold-dark); font-style: normal; font-weight: 600; }
+    .stat-warn { color: var(--vermillion); font-weight: 600; }
+  </style>
+</head>
+<body>
+  <a href="index.html" class="back-link">← Return to Game</a>
+  <h1>Occulta Magicae</h1>
+  <p style="font-family:var(--font-display);color:var(--gold-dark);font-size:0.8rem;letter-spacing:2px;text-transform:uppercase;">Hints & Walkthrough</p>
+
+  <h2>🕯 Getting Started</h2>
+  <p>You begin with a handful of cards on a parchment table. The game runs in real time — seasons pass whether you act or not. Your goal is to master the Hermetic Arts and achieve one of eight victory conditions before the dangers overwhelm you.</p>
+
+  <h3>Controls</h3>
+  <ul>
+    <li><strong>Click a card</strong> to inspect it and see what it does</li>
+    <li><strong>Drag a card</strong> onto a verb station (Study, Work, etc.) to use it</li>
+    <li><strong>Click a verb slot</strong> to see which cards fit</li>
+    <li><strong>Click a card in a slot</strong> to remove it (or drag it out)</li>
+    <li><span class="key">Space</span> to pause &nbsp; <span class="key">1</span><span class="key">2</span><span class="key">3</span> to change speed &nbsp; <span class="key">Esc</span> to return to menu</li>
+    <li><span class="key">L</span> to open the Chronicle (message log)</li>
+    <li><strong>Scroll</strong> to zoom, <strong>drag empty space</strong> to pan</li>
+    <li>Use the layout buttons (top right) to switch between grid, column, and compact views</li>
+  </ul>
+
+  <h3>Your First Turn</h3>
+  <ol>
+    <li>Pause the game (<span class="key">Space</span>) and read your cards</li>
+    <li>Drag <em>A Tattered Folio</em> onto <em>Study</em> — this teaches you Vim (raw magic)</li>
+    <li>Drag <em>Ars Creationis</em> onto <em>Study</em> — this teaches you Creo (creation)</li>
+    <li>Drag <em>A Letter from a Stranger</em> onto <em>Study</em> — this introduces you to a Magus of the Order, unlocking the <em>Speak</em> verb</li>
+    <li>Drag <em>A Wandering Magus</em> onto <em>Speak</em> — he teaches you Intellego (perception), unlocking the <em>Explore</em> verb</li>
+    <li>Study vis to gain warping — at warping 2, the <em>Dream</em> verb unlocks</li>
+    <li>Keep studying to reach Art level 3 — this unlocks the <em>Work</em> verb</li>
+  </ol>
+  <p>It takes several seasons to unlock all verbs. Be patient — the early game is about building your foundation.</p>
+
+  <h2>📖 How the Verbs Work</h2>
+  <ul>
+    <li><strong>Study</strong> — Drag texts, vis, or art fragments here. Studying a text gives you a new Art. Studying two matching Art fragments deepens that Art (e.g., two Vim Level 1 → one Vim Level 2). Study your Fervor for random Art insight (costs hubris). Study your Acumen to reduce Hubris.</li>
+    <li><strong>Work</strong> <em>(unlocks at Art level 3)</em> — Drag a Technique (Creo, Perdo, etc.) and a Form (Vim, Ignem, etc.) to craft a spell. Cast spells for various effects.</li>
+    <li><strong>Dream</strong> <em>(unlocks at warping 2)</em> — Drag a Vim art to enter the Twilight (gives Enigma mystery cards, risky). Drag a Mystery card to advance that path. Drag Vigor to rest and reduce Corruption (slowly, may gain warping).</li>
+    <li><strong>Explore</strong> <em>(unlocks with Intellego)</em> — Drag an Intellego art to discover new locations. Drag a location to search it for vis, texts, and secrets.</li>
+    <li><strong>Speak</strong> <em>(unlocks when you meet a Magus)</em> — Drag companions to learn and trade. Drag Silver to reduce Notoriety.</li>
+    <li><strong>Time Passes</strong> — Automatic. Each season grants silver, sometimes vis, and eventually companions. Threats may appear.</li>
+  </ul>
+
+  <h2>⚠ Threats</h2>
+  <p>Threats appear as red-bordered stations alongside your verbs. When a threat spawns, it <strong>captures one of your cards</strong> — the villagers take your silver, the priest confiscates a text, warping absorbs your vis. You can see which card was captured.</p>
+  <p>To resolve a threat, <strong>drag the required card type into the threat's slot</strong>. If you resolve it in time, you get your captured card back. If the timer expires, the captured card is lost and worse effects follow.</p>
+
+  <h2>⚠ The Four Dangers</h2>
+  <p>Four status bars track your peril. If any reaches 10, you lose:</p>
+  <ul>
+    <li><strong>Warping</strong> — Accumulates from powerful magic. <span class="stat-warn">At 10: consumed by Twilight.</span> Reduced by mastering the Enigma.</li>
+    <li><strong>Notoriety</strong> — The mundane world's attention. <span class="stat-warn">At 10: the Inquisition.</span> Reduced by spending Silver in Speak, or casting Veil of Invisibility.</li>
+    <li><strong>Corruption</strong> — Infernal taint from dark places. <span class="stat-warn">At 10: damnation.</span> Reduced by resting (Dream + Vigor) or casting Demon's Eternal Oblivion.</li>
+    <li><strong>Hubris</strong> — Magical overreach. <span class="stat-warn">At 10: lost to obsession.</span> Reduced by Study + Acumen (clears the mind).</li>
+  </ul>
+
+  <h2>🏆 Victory Conditions</h2>
+  <p>There are eight paths to victory. Each requires a different approach.</p>
+
+  <div class="ending-box">
+    <h3>✧ Ascension Through Twilight</h3>
+    <p><em>Difficulty: Medium</em></p>
+    <p>Complete the <strong>Enigma of Criamon</strong> mystery (all 4 steps), reach <strong>Vim level 5</strong>, and have <strong>Warping ≥ 8</strong>.</p>
+    <p><span class="spoiler" onclick="this.classList.toggle('revealed')">Strategy: Dream + Vim art to enter Twilight and advance Enigma. Study vis and texts to push Vim to 5. Let warping accumulate — you need it. The Enigma protects you from Twilight loss.</span></p>
+  </div>
+
+  <div class="ending-box">
+    <h3>⚙ Archmagus</h3>
+    <p><em>Difficulty: Hard</em></p>
+    <p>Master <strong>2 Techniques to level 4+</strong> and <strong>2 Forms to level 4+</strong>.</p>
+    <p><span class="spoiler" onclick="this.classList.toggle('revealed')">Strategy: Study aggressively — every text, every vis. Speak with the Magus for new arts (up to 4 times reliably). Explore for texts. Combine matching art fragments in Study to level up. Watch Hubris — use Acumen regularly.</span></p>
+  </div>
+
+  <div class="ending-box">
+    <h3>❋ Hierophant of the Mysteries</h3>
+    <p><em>Difficulty: Hard</em></p>
+    <p>Complete <strong>3 of the 9 mystery paths</strong> to step 4.</p>
+    <p><span class="spoiler" onclick="this.classList.toggle('revealed')">Strategy: Study Animal ≥2 for Heartbeast. Study Terram ≥2 for Artifice. Dream + Vim for Enigma. Explore Silver Wood for Arcadia. Then Dream with each mystery card to advance. Hubris grows with each mystery step — manage it with Acumen.</span></p>
+  </div>
+
+  <div class="ending-box">
+    <h3>🏰 Covenant Primus</h3>
+    <p><em>Difficulty: Medium</em></p>
+    <p>Have the <strong>Aegis of the Hearth</strong> spell + <strong>3 companions</strong> + <strong>2 locations</strong> + <strong>3 texts</strong>.</p>
+    <p><span class="spoiler" onclick="this.classList.toggle('revealed')">Strategy: Build resources. Craft Aegis of the Hearth (Work: Rego + Vim). Collect companions from time events (seasons 3, 6, 14). Explore with Intellego for locations. Keep texts by not studying all of them. A builder's victory.</span></p>
+  </div>
+
+  <div class="ending-box">
+    <h3>🔨 The Great Working</h3>
+    <p><em>Difficulty: Very Hard</em></p>
+    <p>Complete the <strong>Artifice</strong> mystery path + have <strong>5 unique items</strong>.</p>
+    <p><span class="spoiler" onclick="this.classList.toggle('revealed')">Strategy: Study Terram ≥2 to start Artifice. Dream with Artifice mystery cards. Then Work with spells and vis to create enchanted items. Some items come from mystery rewards. The Artificer's path.</span></p>
+  </div>
+
+  <div class="ending-box">
+    <h3>🎵 The Hymn Primordial</h3>
+    <p><em>Difficulty: Hard</em></p>
+    <p>Complete the <strong>Hyperborean Hymns</strong> mystery path + <strong>Warping ≥ 5</strong>.</p>
+    <p><span class="spoiler" onclick="this.classList.toggle('revealed')">Strategy: The Hymns path triggers from studying Imaginem art. Dream with the mystery cards to advance. Warping accumulates from magic use. A path of dangerous beauty.</span></p>
+  </div>
+
+  <div class="ending-box">
+    <h3>🕊 Peacemaker of the Order</h3>
+    <p><em>Difficulty: Very Hard</em></p>
+    <p>Resolve <strong>8+ threats</strong> + have <strong>3 companions</strong> + keep <strong>Notoriety ≤ 2</strong>.</p>
+    <p><span class="spoiler" onclick="this.classList.toggle('revealed')">Strategy: Never ignore threats — resolve every one by dragging the right card into the threat slot. Spend silver to keep notoriety low. Collect companions. This requires patience and resource management over many seasons.</span></p>
+  </div>
+
+  <div class="ending-box">
+    <h3>🌀 The Forbidden Synthesis</h3>
+    <p><em>Difficulty: Very Hard</em></p>
+    <p>Hold cards from <strong>all four realms</strong> (Magic, Divine, Faerie, Infernal) + complete <strong>1 mystery path</strong>.</p>
+    <p><span class="spoiler" onclick="this.classList.toggle('revealed')">Strategy: Magic cards are common. Faerie cards come from Silver Wood. Infernal cards come from Ruined Chapel. Divine cards come from rare companions. Complete any mystery path. A dangerous balancing act — corruption rises from Infernal cards.</span></p>
+  </div>
+
+  <h2>🗝 Mystery Paths</h2>
+  <p>There are nine mystery paths, each triggered differently:</p>
+  <ul>
+    <li><strong>Enigma of Criamon</strong> — Triggered by <em>Dream + Vim art</em> (entering Twilight). The Twilight itself advances this path.</li>
+    <li><strong>Heartbeast of Bjornaer</strong> — Triggered by <em>studying Animal to level 2+</em>. Then Dream with the mystery cards.</li>
+    <li><strong>Verdant Artifice</strong> — Triggered by <em>studying Terram to level 2+</em>. Then Dream with the mystery cards.</li>
+    <li><strong>Path of Arcadia</strong> — Triggered by <em>exploring Faerie locations</em> (The Silver Wood). Then Dream with the mystery cards.</li>
+    <li><strong>Path of Necromancy</strong> — Triggered by <em>studying Corpus to level 3+</em> or exploring dark locations. Then Dream with mystery cards.</li>
+    <li><strong>Path of the Runes</strong> — Triggered by <em>discovering ancient Scandinavian texts</em>. Then Dream with mystery cards.</li>
+    <li><strong>Hyperborean Hymns</strong> — Triggered by <em>studying Imaginem to level 2+</em>. Then Dream with mystery cards.</li>
+    <li><strong>Path of the Body</strong> — Branched from Enigma at higher levels. Then Dream with mystery cards.</li>
+    <li><strong>Path of Strife</strong> — Branched from Enigma at higher levels. A dark path with powerful rewards.</li>
+  </ul>
+
+  <h2>💡 Tips</h2>
+  <ul>
+    <li>Pause often! Read your cards. The game rewards understanding over speed.</li>
+    <li>Click verb slots to see what fits — the gold glow shows compatible cards.</li>
+    <li><strong>Threats steal your cards!</strong> Resolve them quickly by dragging the right card into the threat's slot. If the timer expires, you lose the captured card and suffer worse effects.</li>
+    <li>A guaranteed threat appears at season 2 — be ready with silver.</li>
+    <li>The Wandering Magus teaches reliably for 4 visits, then becomes less helpful. Make each visit count.</li>
+    <li>Silver Pennies are vital — for threats, bribes, and the Tax Collector. Don't spend them all.</li>
+    <li>Clearing corruption with Dream+Vigor is slow (−1 per rest) and may cause warping. Prevention is better than cure.</li>
+    <li>Hubris clears slowly with Study+Acumen (−1). Don't let it build up past 7.</li>
+    <li>The Ruined Chapel is dangerous (infernal taint). The Silver Wood is rewarding (faerie). Choose wisely.</li>
+    <li>Study your <em>Fervor</em> for a random Art insight — useful when you're stuck but it raises Hubris.</li>
+    <li>When dragging cards, watch for <span style="color:var(--vermillion)">red ✕</span> on slots — this means that verb can't complete even if you place your card there.</li>
+    <li>You can remove a card from a verb slot by clicking it or dragging it out (only before the verb starts processing).</li>
+  </ul>
+
+  <h2>⚔ Loss Conditions</h2>
+  <p>If any danger stat reaches 10, you lose:</p>
+  <ul>
+    <li><strong>Warping 10</strong> — Consumed by Twilight (unless you've completed the Enigma → then it's Ascension)</li>
+    <li><strong>Notoriety 10</strong> — The Inquisition</li>
+    <li><strong>Corruption 10</strong> — Damned by the Infernal</li>
+    <li><strong>Hubris 10</strong> — Lost to Obsession</li>
+  </ul>
+
+  <br>
+  <a href="index.html" class="back-link">← Return to Game</a>
+</body>
+</html>

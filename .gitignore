@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# OS files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+# Editor / IDE
+.vscode/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Docs source (raw markdown reference material)
+/docs/
+
+# Image generation output
+/image-gen/output/

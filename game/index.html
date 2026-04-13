@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Occulta Magicae</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="game-container">
+    <header id="game-header">
+      <h1>Occulta Magicae</h1>
+      <div id="season-display">
+        <span id="season-label">Spring</span>
+        <span id="year-label">Anno Domini 1220</span>
+      </div>
+      <div id="time-controls">
+        <button class="time-btn" id="menu-btn" title="Main Menu (Esc)">☰</button>
+        <button class="time-btn" id="pause-btn" title="Pause (Space)">⏸</button>
+        <button class="time-btn speed-btn" data-speed="1" title="Normal speed (1)">▶</button>
+        <button class="time-btn speed-btn" data-speed="2" title="Fast (2)">▶▶</button>
+        <button class="time-btn speed-btn active" data-speed="3" title="Fastest (3)">▶▶▶</button>
+        <button class="time-btn" id="export-btn" title="Export save (Ctrl+S)">💾</button>
+      </div>
+      <div id="status-bar">
+        <div class="status-item clickable" data-stat="warping" title="Click for details">
+          <span class="status-icon">◈</span>
+          <span class="status-label">Warping</span>
+          <div class="status-fill-track"><div class="status-fill" id="warping-fill"></div></div>
+          <span class="status-value" id="warping-value">0</span>
+        </div>
+        <div class="status-item clickable" data-stat="notoriety" title="Click for details">
+          <span class="status-icon">👁</span>
+          <span class="status-label">Notoriety</span>
+          <div class="status-fill-track"><div class="status-fill" id="notoriety-fill"></div></div>
+          <span class="status-value" id="notoriety-value">0</span>
+        </div>
+        <div class="status-item clickable" data-stat="corruption" title="Click for details">
+          <span class="status-icon">☽</span>
+          <span class="status-label">Corruption</span>
+          <div class="status-fill-track"><div class="status-fill" id="corruption-fill"></div></div>
+          <span class="status-value" id="corruption-value">0</span>
+        </div>
+        <div class="status-item clickable" data-stat="hubris" title="Click for details">
+          <span class="status-icon">✧</span>
+          <span class="status-label">Hubris</span>
+          <div class="status-fill-track"><div class="status-fill" id="hubris-fill"></div></div>
+          <span class="status-value" id="hubris-value">0</span>
+        </div>
+      </div>
+    </header>
+
+    <main id="game-table">
+      <div id="table-viewport">
+        <div id="verb-area"></div>
+        <div id="card-area"></div>
+      </div>
+      <div id="zoom-controls">
+        <button class="zoom-btn" id="zoom-in" title="Zoom in (+)">+</button>
+        <span id="zoom-level">100%</span>
+        <button class="zoom-btn" id="zoom-out" title="Zoom out (−)">−</button>
+        <button class="zoom-btn" id="zoom-reset" title="Reset zoom (0)">⊙</button>
+        <span style="border-left:1px solid var(--gold-dark);height:20px;margin:0 6px;"></span>
+        <button class="zoom-btn layout-btn active" data-layout="grid" title="Grid layout">▦</button>
+        <button class="zoom-btn layout-btn" data-layout="columns" title="Column stacks">☰</button>
+        <button class="zoom-btn layout-btn" data-layout="compact" title="Compact list">≡</button>
+      </div>
+    </main>
+
+    <div id="card-detail-overlay" class="hidden">
+      <div id="card-detail">
+        <button id="card-detail-close">✕</button>
+        <div id="card-detail-art"></div>
+        <h2 id="card-detail-title"></h2>
+        <div id="card-detail-subtitle"></div>
+        <div class="card-detail-divider"></div>
+        <p id="card-detail-description"></p>
+        <div class="card-detail-divider"></div>
+        <div id="card-detail-aspects"></div>
+        <div id="card-detail-lore"></div>
+      </div>
+    </div>
+
+    <div id="notification-area"></div>
+    <div id="aspect-tooltip" class="hidden"></div>
+
+    <div id="stat-tooltip" class="hidden">
+      <div id="stat-tooltip-title"></div>
+      <div id="stat-tooltip-desc"></div>
+      <div id="stat-tooltip-hints"></div>
+    </div>
+
+    <div id="log-toggle" title="Message Log">
+      <span id="log-toggle-icon">📜</span>
+      <span id="log-badge" class="hidden">0</span>
+    </div>
+    <div id="log-panel" class="hidden">
+      <div id="log-header">
+        <span>Chronicle</span>
+        <button id="log-close">✕</button>
+      </div>
+      <div id="log-entries"></div>
+    </div>
+
+    <div id="game-over-overlay" class="hidden">
+      <div id="game-over-content">
+        <h2 id="game-over-title"></h2>
+        <p id="game-over-text"></p>
+        <button id="game-over-restart">Begin Anew</button>
+        <button id="game-over-menu" style="margin-top:8px;">Main Menu</button>
+      </div>
+    </div>
+
+    <!-- Verb preview popup — shows when card placed in slot -->
+    <div id="verb-preview-overlay" class="hidden">
+      <div id="verb-preview-content">
+        <div id="verb-preview-header">
+          <span id="verb-preview-title"></span>
+          <button id="verb-preview-close">✕</button>
+        </div>
+        <div id="verb-preview-body">
+          <div id="verb-preview-slots"></div>
+          <div id="verb-preview-info">
+            <p id="verb-preview-label"></p>
+            <p id="verb-preview-description"></p>
+            <div id="verb-preview-lore"></div>
+          </div>
+        </div>
+        <div id="verb-preview-actions">
+          <button id="verb-preview-start">Begin</button>
+          <button id="verb-preview-cancel">Remove Card</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="menu-overlay">
+      <div id="menu-content">
+        <h1>Occulta Magicae</h1>
+        <p class="intro-subtitle">A Game of Hidden Arts</p>
+        <div class="intro-text">
+          <p>You have always seen what others cannot.</p>
+          <p>The shimmer at the edge of firelight. The whisper beneath thunder. The pattern in the fall of leaves that is not quite random.</p>
+          <p>They call it <em>The Gift</em>. It is also a curse.</p>
+        </div>
+        <div id="menu-buttons">
+          <button id="menu-new" class="menu-btn">New Game</button>
+          <button id="menu-continue" class="menu-btn hidden">Continue</button>
+          <a href="hints.html" class="menu-btn menu-btn-secondary" style="display:inline-block;text-align:center;text-decoration:none;">Hints & Walkthrough</a>
+          <button id="menu-import" class="menu-btn menu-btn-secondary">Import Save</button>
+          <input type="file" id="import-file-input" accept=".json" style="display:none">
+        </div>
+        <p class="menu-hint">Space to pause · 1/2/3 for speed · Drag cards to stations · Click to inspect</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/state.js"></script>
+  <script src="js/cards.js"></script>
+  <script src="js/content.js"></script>
+  <script src="js/timer.js"></script>
+  <script src="js/recipes.js"></script>
+  <script src="js/verbs.js"></script>
+  <script src="js/mysteries.js"></script>
+  <script src="js/events.js"></script>
+  <script src="js/threats.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
